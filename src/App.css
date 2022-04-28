@@ -16,6 +16,7 @@
 .app__submit {
   padding: 6px 16px;
   font-size: 15px;
+  font-weight: 700;
   margin-left: 6px;
   background-color: #02aff0;
   border: 2px solid #02aff0;
