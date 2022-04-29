@@ -5,21 +5,21 @@ import { useState } from "react";
 
 function App() {
   const [number, setnumber] = useState(); // an input number
-  const  words = [] // data from words api
+  const [words, setWords] = useState({}) // data from words api
   const [isValid, setisValid] = useState(true)
-  const [data, setData] = useState(false)
+  const [dataReceived, setDataReceived] = useState(false)
 
   const getData = async (num) => {
-    while (words.length != num ){
-      await Axios.get('https://random-words-api.vercel.app/word').then(res => {  
-        if (!words.hasOwnProperty(res.data[0])){
-          words.push(res.data[0])
-        }      
-      })
+    for (let i = 0; i < num; i++){
+      var res = await Axios.get('https://random-words-api.vercel.app/word') 
+      if (!words.hasOwnProperty(res.data[0].word)){
+          setWords(prevState => ({
+            ...prevState,
+            [res.data[0].word]: res.data[0]}))
+      } else {continue;}
     }
-    console.log(words)
     console.log(words.length)
-    setData(true)
+    setDataReceived(true)
   };
 
   
@@ -53,10 +53,7 @@ function App() {
           )}
 
       <div className="app__recipes">
-        {words.length != 0 &&
-          words.map( data => {
-            return <h1>hello</h1>
-            } )}
+        {dataReceived && Object.values(words).map((data)=>{return <WordTile data={data}/>})}
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 .wordTile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display:inline-block;
+    margin: 10px 10px;
+    padding: 2px 20px;
+    background-color: rgb(193, 247, 193);
     cursor: pointer;
   }
   
   .wordTile__name {
-    max-width: 200px;
-    text-align: center;
-    margin: 12px 0px;
+    font-size: small;
+    color: black;
+    text-align: left;
   }
