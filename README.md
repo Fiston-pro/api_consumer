@@ -1,6 +1,6 @@
 # React app that shows you the random words
 
-This is a well designed page where you have to put the number btn 5 and 20, it will call the api https://random-words-api.vercel.app/word. it will show you words depending on the number you choose and it will display on your page.
+This is a well designed page where you have to put the number btn 5 and 20, it will call the api https://random-words-api.vercel.app/word. it will show you completely different words depending on the number you choose and it will display on your page.
 
 ## Getting Started
 
