@@ -23,7 +23,7 @@ function App() {
   };
 
   
-  // We avoid reloading the whole screen by using this function
+  // We avoid reloading the screen everytime by using this function
   const onSubmit = (e) => {
     e.preventDefault();
     let num = parseInt(number)
